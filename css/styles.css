@@ -1,0 +1,146 @@
+/* Fonts
+font-family: 'Lora', serif;
+font-family: 'Ubuntu', sans-serif; 
+*/
+
+body {
+  /* removes white space around header */
+  margin: 0;
+  font-family: "Ubuntu", sans-serif;
+}
+
+/* 
+Typography
+*/
+
+h1 {
+  font-family: "Lora", serif;
+  /* removes bold */
+  font-weight: 400;
+  font-size: 2rem;
+  color: darkblue;
+  margin: 0;
+}
+
+.subtitle {
+  font-size: 0.75rem;
+  font-weight: 700;
+  margin: 0;
+  color: darkblue;
+}
+
+/*
+Layout
+*/
+
+.container {
+  /* border: 1px solid magenta; */
+  width: 90%;
+  max-width: 900px;
+  /* centers the container on the page */
+  margin: 0 auto;
+}
+
+.container-nav {
+  /* the title and nav are next to each other */
+  display: flex;
+  justify-content: space-between;
+  /* vertical alignment of title and nav items */
+  align-items: center;
+}
+
+header {
+  /* text-align: center; */
+  background: lightblue;
+  padding: 2em 0;
+}
+
+/*
+navigation
+*/
+
+.nav {
+  /* border: 1px solid black; */
+}
+
+.nav-list {
+  /* border: 1px solid magenta; */
+  display: flex;
+  /* centers the nav-items (children) on the page */
+  justify-content: center;
+  /* remove bullets for ul */
+  list-style: none;
+  /* removes formatting from ul */
+  margin: 0;
+  /* removes formatting from ul */
+  padding: 0;
+}
+
+.nav-item {
+  /* border: 1px solid orange; */
+  /* get space between items without space on right end*/
+  margin-left: 1rem;
+  /* padding: 0.5rem; */
+}
+
+.nav-link {
+  /* border: 1px solid green; */
+  /* removes underline */
+  text-decoration: none;
+  color: royalblue;
+  /* standard weight for bold */
+  font-weight: 700;
+  /* make button slightly bigger, good for mobile */
+  /* also move the current-page underline down a bit */
+  padding: 0.25em 0;
+}
+
+.nav-link:hover,
+/* last one clicked */
+.nav-link:focus {
+  color: rgb(235, 72, 8);
+}
+
+/* get line between nav items */
+.nav li + li {
+  border-left: 1px solid #b6b4b4;
+  padding-left: 1em;
+}
+
+.current-page {
+  /* text-decoration: underline; */
+  border-bottom: 1px solid black;
+}
+
+.current-page:hover {
+  color: royalblue;
+}
+
+/*
+media queries
+*/
+
+@media (max-width: 710px) {
+  .container-nav {
+    flex-direction: column;
+  }
+
+  .nav-list {
+    /* border: 1px solid black; */
+    flex-direction: column;
+    justify-content: flex-end;
+    align-content: flex-start;
+  }
+  .nav li + li {
+    border-left: 0;
+    padding-left: 0;
+  }
+
+  .nav-item {
+    margin: 0.5em 0;
+  }
+  header {
+    /* centers title and nav on small screen */
+    text-align: center;
+  }
+}
