@@ -7,31 +7,86 @@ body {
   /* removes white space around header */
   margin: 0;
   font-family: "Ubuntu", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 300;
 }
 
 /* 
 Typography
 */
 
-h1 {
+h1, 
+h2,
+h3 {
   font-family: "Lora", serif;
   /* removes bold */
   font-weight: 400;
+}
+
+h1 {
   font-size: 2rem;
   color: darkblue;
   margin: 0;
+}
+
+a {
+  color: #1792d2;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  color: darkblue;
+}
+
+strong {
+  font-weight: 700;
 }
 
 .subtitle {
   font-size: 0.75rem;
   font-weight: 700;
   margin: 0;
-  color: darkblue;
+  color: rgb(53, 161, 211);
+}
+
+.article-title {
+  font-size: 1.5rem;
+}
+
+.article-read-more,
+.article-info {
+  font-size: 0.875rem;
+}
+
+.article-read-more {
+  color: #1792d2;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.article-read-more:hover,
+.article-read-more:focus {
+  color: #143774;
+  text-decoration: underline;
 }
 
 /*
 Layout
 */
+
+main {
+  width:75%;
+}
+
+aside {
+  width: 20%;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
 
 .container {
   /* border: 1px solid magenta; */
@@ -41,7 +96,7 @@ Layout
   margin: 0 auto;
 }
 
-.container-nav {
+.container-flex {
   /* the title and nav are next to each other */
   display: flex;
   justify-content: space-between;
@@ -51,17 +106,16 @@ Layout
 
 header {
   /* text-align: center; */
-  background: lightblue;
+  background: rgb(229, 245, 250);
   padding: 2em 0;
 }
-
+.sidebar-widget {
+  border: 1px solid red;
+}
 /*
 navigation
 */
 
-.nav {
-  /* border: 1px solid black; */
-}
 
 .nav-list {
   /* border: 1px solid magenta; */
@@ -84,7 +138,6 @@ navigation
 }
 
 .nav-link {
-  /* border: 1px solid green; */
   /* removes underline */
   text-decoration: none;
   color: royalblue;
@@ -96,19 +149,17 @@ navigation
 }
 
 .nav-link:hover,
-/* last one clicked */
 .nav-link:focus {
   color: rgb(235, 72, 8);
 }
 
-/* get line between nav items */
+/* line between nav items */
 .nav li + li {
   border-left: 1px solid #b6b4b4;
   padding-left: 1em;
 }
 
 .current-page {
-  /* text-decoration: underline; */
   border-bottom: 1px solid black;
 }
 
